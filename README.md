@@ -1,2 +1,3 @@
-# ssf_12l
-VTTP SSF Day 12 Lecture
+# SSF Day 12 Lecture
+## Questions
+
