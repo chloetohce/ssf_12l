@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import sg.edu.nus.iss.ssf_12l.model.country.Country;
 import sg.edu.nus.iss.ssf_12l.service.CountryService;
 
-
-
 @Controller
 @RequestMapping("/countries")
 public class CountryController {
@@ -28,7 +26,7 @@ public class CountryController {
     }
     
     @GetMapping("/filter")
-    public String filterCountries(@RequestParam("population") String population, Model model) {
+    public String filterCountries(@RequestParam(required = true) String population, Model model) {
         List<Country> countries = countryService.getCountries();
         countries = countries.stream()
             .filter(c -> Integer.parseInt(c.getPopulation()) >= Integer.parseInt(population))

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form A</title>
+</head>
+<body>
+    <form method="post" th:action="@{/weather/forma}"> <!--Need a post method, with the endpoint being forma-->
+        <label for="country">Country</label>
+        <input type="text" name="country" id="country" placeholder="Enter city name">
+        <br>
+        <label for="temperature">Temperature</label>
+        <input type="text" name="temperature" id="temperature" placeholder="Enter temperature">
+        <br>
+        <button type="submit">Submit</button>
+        <br>
+    </form>
+</body>
+</html>

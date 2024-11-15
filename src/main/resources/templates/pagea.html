@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page A</title>
+</head>
+<body>
+    <ul>
+        <li th:each="country : ${countries}">
+            <span th:text="${country.name}"></span>
+            <ul>
+                <li th:each="unit : ${units}">
+                    <a th:href="@{/weather/{country}(${country.name}, metrics=${unit})}">
+                    <span th:text="${unit}"></span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
