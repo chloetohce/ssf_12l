@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries</title>
+</head>
+<body>
+    <h1>Countries</h1>
+    <div class = "data">
+        <table>
+            <thead>
+                <tr>
+                <th>Country</th>
+                <th>Code</th>
+                <th>Population</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="country : ${countries}">
+                    <td th:text="${country.name}"></td>
+                    <td th:text="${country.code}"></td>
+                    <td th:text="${country.population}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>

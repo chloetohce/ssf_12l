@@ -38,14 +38,10 @@ public class StudentController {
         Long epochDob = dDob.getTime();
         students.add(new Student("Jacob"));
         students.add(new Student("Jude"));
-        
-        System.out.println("Students: " + students.size());
 
         // Convert epoch long to date
         Long epochTime = 13329030023L;
         Date date = new Date(epochTime);
-
-        List<Integer> temp = List.of(1, 2, 3);
 
         // thymeleaf
         model.addAttribute("studentList", students);
