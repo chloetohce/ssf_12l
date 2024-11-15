@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SSF 12L</title>
+</head>
+<body>
+    <h1>All Students</h1>
+    <div class = "data">
+        <table>
+            <thead>
+                <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>ID</th>
+                <th>Email</th>
+                <th>DOB</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-th-each="student : ${studentList}" ></tr>
+                    <td data-th-text="${student.firstName}"></td>
+                    <!-- <td data-th-text="${student.lastName}"></td>
+                    <td data-th-text="${student.id}"></td>
+                    <td data-th-text="${student.email}"></td>
+                    <td data-th-text="${student.birthDate}"></td> -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
